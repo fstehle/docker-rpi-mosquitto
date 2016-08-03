@@ -21,7 +21,7 @@ COPY config /mqtt/config
 
 RUN [ "cross-build-end" ]
 
-VOLUME ["/mqtt/config", "/mqtt/data", "/mqtt/log"]
+VOLUME ["/mqtt/config", "/mqtt/data"]
 
 EXPOSE 1883 9001
 CMD ["/usr/sbin/mosquitto", "-c", "/mqtt/config/mosquitto.conf"]
